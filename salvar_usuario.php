@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once "conexao.php";
 
 $nome = $_POST["nome"];
@@ -24,7 +26,16 @@ $stmt->bind_param(
 
 if ($stmt->execute()) {
 
-    echo "Usuário cadastrado com sucesso!";
+   
+    $id = $conexao->insert_id;
+
+    $_SESSION["usuario_id"] = $id;
+    $_SESSION["usuario_nome"] = $nome;
+    $_SESSION["usuario"] = $usuario;
+
+    
+    header("Location: home.php");
+    exit;
 
 } else {
 
