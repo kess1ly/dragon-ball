@@ -26,6 +26,8 @@ if (!isset($_SESSION["usuario_id"])) {
 
 <body>
 
+   
+
     <header class="cabecalho">
 
         <div class="logo">
@@ -34,36 +36,65 @@ if (!isset($_SESSION["usuario_id"])) {
 
         <nav>
 
-            <a href="home.php">Início</a>
+            <a href="home.php">
+                Início
+            </a>
 
-            <a href="personagens.php">Personagens</a>
+            <a href="personagens.php">
+                Personagens
+            </a>
 
-            <a href="tecnicas.php">Técnicas</a>
+            <a href="tecnicas.php">
+                Técnicas
+            </a>
 
-            <a href="transformacoes.php">Transformações</a>
+            <a href="transformacoes.php">
+                Transformações
+            </a>
 
-            <a href="sagas.php">Sagas</a>
+            <a href="sagas.php">
+                Sagas
+            </a>
 
         </nav>
 
         <div class="usuario">
 
-            Olá, <?php echo htmlspecialchars($_SESSION["usuario_nome"]); ?>
+            Olá,
+            <?php echo htmlspecialchars($_SESSION["usuario_nome"]); ?>
 
-            <a href="logout.php">Sair</a>
+            <a href="logout.php">
+                Sair
+            </a>
 
         </div>
 
     </header>
 
 
+
     <main class="home">
 
-        <section class="hero">
+
+
+        <section
+            class="hero"
+            style="background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 8, 18, 0.98) 0%,
+                    rgba(3, 8, 18, 0.85) 30%,
+                    rgba(3, 8, 18, 0.35) 60%,
+                    rgba(3, 8, 18, 0.05) 100%
+                ),
+                url('fundo-home.png');"
+        >
 
             <div class="hero-conteudo">
 
-                <span>DRAGON BALL ARCHIVE</span>
+                <span>
+                    DRAGON BALL ARCHIVE
+                </span>
 
                 <h1>
                     EXPLORE O UNIVERSO
@@ -76,7 +107,10 @@ if (!isset($_SESSION["usuario_id"])) {
                     e histórias que marcaram o universo Dragon Ball.
                 </p>
 
-                <a href="personagens.php" class="botao">
+                <a
+                    href="personagens.php"
+                    class="botao"
+                >
                     EXPLORAR PERSONAGENS
                 </a>
 
@@ -85,17 +119,32 @@ if (!isset($_SESSION["usuario_id"])) {
         </section>
 
 
+        
+
         <section class="categorias">
 
-            <h2>EXPLORE O ARQUIVO</h2>
+            <h2>
+                EXPLORE O ARQUIVO
+            </h2>
+
 
             <div class="cards">
 
-                <a href="personagens.php" class="card">
 
-                    <div class="icone">👤</div>
+           
 
-                    <h3>PERSONAGENS</h3>
+                <a
+                    href="personagens.php"
+                    class="card"
+                >
+
+                    <div class="icone">
+                        👤
+                    </div>
+
+                    <h3>
+                        PERSONAGENS
+                    </h3>
 
                     <p>
                         Conheça os personagens
@@ -105,11 +154,19 @@ if (!isset($_SESSION["usuario_id"])) {
                 </a>
 
 
-                <a href="tecnicas.php" class="card">
+            
+                <a
+                    href="tecnicas.php"
+                    class="card"
+                >
 
-                    <div class="icone">⚡</div>
+                    <div class="icone">
+                        ⚡
+                    </div>
 
-                    <h3>TÉCNICAS</h3>
+                    <h3>
+                        TÉCNICAS
+                    </h3>
 
                     <p>
                         Descubra golpes e
@@ -119,11 +176,20 @@ if (!isset($_SESSION["usuario_id"])) {
                 </a>
 
 
-                <a href="transformacoes.php" class="card">
+            
 
-                    <div class="icone">🔥</div>
+                <a
+                    href="transformacoes.php"
+                    class="card"
+                >
 
-                    <h3>TRANSFORMAÇÕES</h3>
+                    <div class="icone">
+                        🔥
+                    </div>
+
+                    <h3>
+                        TRANSFORMAÇÕES
+                    </h3>
 
                     <p>
                         Explore as principais
@@ -133,11 +199,20 @@ if (!isset($_SESSION["usuario_id"])) {
                 </a>
 
 
-                <a href="sagas.php" class="card">
+                
 
-                    <div class="icone">📖</div>
+                <a
+                    href="sagas.php"
+                    class="card"
+                >
 
-                    <h3>SAGAS</h3>
+                    <div class="icone">
+                        📖
+                    </div>
+
+                    <h3>
+                        SAGAS
+                    </h3>
 
                     <p>
                         Reviva as histórias
@@ -146,9 +221,11 @@ if (!isset($_SESSION["usuario_id"])) {
 
                 </a>
 
+
             </div>
 
         </section>
+
 
     </main>
 
