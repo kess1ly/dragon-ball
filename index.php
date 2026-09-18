@@ -29,7 +29,7 @@
             </p>
 
             <a href="cadastro_usuario.php" class="botao">
-                🚀 FAÇA SUA VIAGEM
+                 FAÇA SUA VIAGEM
             </a>
 
         </div>
