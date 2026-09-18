@@ -12,7 +12,15 @@
 
 <body>
 
-    <main class="tela-cadastro">
+    <main 
+        class="tela-cadastro"
+        style="background-image:
+            linear-gradient(
+                rgba(3, 8, 18, 0.70),
+                rgba(3, 8, 18, 0.85)
+            ),
+            url('fundo-formulario.png');"
+    >
 
         <div class="cadastro-box">
 
