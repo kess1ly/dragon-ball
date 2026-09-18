@@ -32,11 +32,6 @@ $resultado = $conexao->query($sql);
 
 <body>
 
-
-    <!-- =========================
-         CABEÇALHO
-    ========================= -->
-
     <header class="cabecalho">
 
         <div class="logo">
@@ -81,9 +76,6 @@ $resultado = $conexao->query($sql);
     </header>
 
 
-    <!-- =========================
-         PERSONAGENS
-    ========================= -->
 
     <main class="pagina-personagens">
 
