@@ -27,7 +27,6 @@ body {
     overflow: hidden; 
 } 
  
-/* Escurece o lado esquerdo da imagem */ 
 .tela-inicial::before { 
     content: ""; 
  
@@ -559,21 +558,22 @@ body {
     color: #ffb900; 
 } 
  
- 
-/* ========================= 
-   PÁGINA DE PERSONAGENS 
-========================= */ 
- 
-.pagina-personagens { 
-    min-height: calc(100vh - 75px); 
-    padding: 70px; 
-    background-color: #050b16; 
-} 
- 
- 
-/* ========================= 
-   TOPO DA PÁGINA 
-========================= */ 
+.pagina-personagens {
+    min-height: calc(100vh - 75px);
+    padding: 70px;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 18, 0.70),
+            rgba(3, 8, 18, 0.85)
+        ),
+        url("fundo-formulario.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
  
 .topo-personagens { 
     max-width: 1200px; 
@@ -602,11 +602,6 @@ body {
     font-size: 16px; 
 } 
  
- 
-/* ========================= 
-   LISTA DE PERSONAGENS 
-========================= */ 
- 
 .lista-personagens { 
     max-width: 1200px; 
     margin: 0 auto; 
@@ -615,11 +610,6 @@ body {
     grid-template-columns: repeat(3, 1fr); 
     gap: 25px; 
 } 
- 
- 
-/* ========================= 
-   CARD DO PERSONAGEM 
-========================= */ 
  
 .card-personagem { 
     background-color: #0d1626; 
@@ -639,11 +629,6 @@ body {
  
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
 } 
- 
- 
-/* ========================= 
-   IMAGEM 
-========================= */ 
  
 .imagem-personagem { 
     width: 100%; 
@@ -669,10 +654,7 @@ body {
     transform: scale(1.05); 
 } 
  
- 
-/* ========================= 
-   SEM IMAGEM 
-========================= */ 
+
  
 .imagem-personagem .sem-imagem { 
     width: 100%; 
@@ -687,12 +669,7 @@ body {
     font-size: 13px; 
     font-weight: bold; 
 } 
- 
- 
-/* ========================= 
-   INFORMAÇÕES DO CARD 
-========================= */ 
- 
+
 .info-personagem { 
     padding: 25px; 
 } 
@@ -718,22 +695,13 @@ body {
 .info-personagem strong { 
     color: #ffb900; 
 } 
- 
- 
-/* ========================= 
-   BOTÃO VER PERFIL 
-========================= */ 
+
  
 .info-personagem .botao { 
     width: 100%; 
  
     margin-top: 15px; 
 } 
- 
- 
-/* ========================= 
-   NENHUM PERSONAGEM 
-========================= */ 
  
 .nenhum-personagem { 
     grid-column: 1 / -1; 
@@ -757,3 +725,342 @@ body {
 .nenhum-personagem p { 
     color: #aeb7c5; 
 } 
+
+.perfil-personagem {
+    min-height: calc(100vh - 75px);
+    padding: 70px;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 18, 0.70),
+            rgba(3, 8, 18, 0.85)
+        ),
+        url("fundo-formulario.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.perfil-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.perfil-imagem {
+    width: 100%;
+    height: 600px;
+
+    background-color: #111a2b;
+
+    border: 1px solid #24334a;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.perfil-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+.perfil-informacoes span {
+    color: #ffb900;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.perfil-informacoes h1 {
+    margin-top: 15px;
+    margin-bottom: 40px;
+
+    font-size: 58px;
+    font-weight: 900;
+
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+
+.informacao {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #24334a;
+}
+
+.informacao strong {
+    display: block;
+
+    color: #ffb900;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.informacao p {
+    color: #d9dee7;
+
+    font-size: 17px;
+}
+
+
+.recursos-ia {
+    max-width: 1200px;
+
+    margin: 70px auto 0;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #24334a;
+}
+
+.recursos-ia span {
+    color: #ffb900;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.recursos-ia h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+.ia-botoes {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.ia-botoes button {
+    padding: 15px 22px;
+
+    background-color: #0d1626;
+
+    border: 1px solid #24334a;
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.ia-botoes button:hover {
+    background-color: #ffb900;
+
+    border-color: #ffb900;
+
+    color: #050b16;
+}
+
+
+
+
+.voltar {
+    display: block;
+
+    max-width: 1200px;
+
+    margin: 40px auto 0;
+
+    color: #ffb900;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    color: white;
+}
+
+
+
+
+
+
+/* =========================
+   TÉCNICAS
+========================= */
+
+.pagina-tecnicas {
+    min-height: calc(100vh - 75px);
+    padding: 70px;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 18, 0.70),
+            rgba(3, 8, 18, 0.85)
+        ),
+        url("fundo-formulario.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo-tecnicas {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+}
+
+.topo-tecnicas span {
+    color: #ffb900;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.topo-tecnicas h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    color: white;
+    font-size: 58px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.topo-tecnicas p {
+    color: #aeb7c5;
+    font-size: 16px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards-tecnicas {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card-tecnica {
+    min-height: 270px;
+
+    padding: 30px;
+
+    background-color: #0d1626;
+
+    border: 1px solid #24334a;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s ease;
+}
+
+.card-tecnica:hover {
+    transform: translateY(-6px);
+
+    border-color: #ffb900;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   NOME DA TÉCNICA
+========================= */
+
+.card-tecnica h2 {
+    margin-bottom: 18px;
+
+    color: #ffb900;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.card-tecnica p {
+    color: #d9dee7;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+
+.tecnica-detalhe {
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #24334a;
+}
+
+.tecnica-detalhe strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #ffb900;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.tecnica-detalhe span {
+    color: #aeb7c5;
+
+    font-size: 14px;
+}
