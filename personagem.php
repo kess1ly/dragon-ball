@@ -119,16 +119,11 @@ $personagem = $resultado->fetch_assoc();
     </header>
 
 
-    <!-- =========================
-         PERFIL DO PERSONAGEM
-    ========================= -->
-
-    <main class="perfil-personagem">
+    <main class="perfil-personagem"
+    >
 
         <section class="perfil-conteudo">
 
-
-            <!-- IMAGEM -->
 
             <div class="perfil-imagem">
 
@@ -150,7 +145,7 @@ $personagem = $resultado->fetch_assoc();
             </div>
 
 
-            <!-- INFORMAÇÕES -->
+            
 
             <div class="perfil-informacoes">
 
@@ -219,10 +214,6 @@ $personagem = $resultado->fetch_assoc();
 
         </section>
 
-
-        <!-- =========================
-             RECURSOS DA IA
-        ========================= -->
 
         <section class="recursos-ia">
 
