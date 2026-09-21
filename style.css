@@ -1,14 +1,21 @@
+
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
 } 
  
+ 
 body { 
     font-family: Arial, Helvetica, sans-serif; 
     background-color: #050b16; 
     color: white; 
 } 
+ 
+ 
+/* ========================= 
+   TELA INICIAL 
+========================= */ 
  
 .tela-inicial { 
     min-height: 100vh; 
@@ -27,6 +34,7 @@ body {
     overflow: hidden; 
 } 
  
+ 
 .tela-inicial::before { 
     content: ""; 
  
@@ -43,11 +51,14 @@ body {
     z-index: 1; 
 } 
  
+ 
 .conteudo { 
     width: 550px; 
+ 
     position: relative; 
     z-index: 2; 
 } 
+ 
  
 .conteudo h1 { 
     font-size: 28px; 
@@ -58,6 +69,7 @@ body {
  
     color: #ffffff; 
 } 
+ 
  
 .conteudo h2 { 
     font-size: 86px; 
@@ -74,6 +86,7 @@ body {
     text-transform: uppercase; 
 } 
  
+ 
 .conteudo p { 
     font-size: 18px; 
  
@@ -85,6 +98,11 @@ body {
  
     margin-bottom: 40px; 
 } 
+ 
+ 
+/* ========================= 
+   BOTÃO 
+========================= */ 
  
 .botao { 
     display: inline-flex; 
@@ -110,6 +128,7 @@ body {
     transition: 0.3s ease; 
 } 
  
+ 
 .botao:hover { 
     transform: translateY(-3px); 
  
@@ -117,6 +136,11 @@ body {
  
     box-shadow: 0 10px 30px rgba(255, 185, 0, 0.25); 
 } 
+ 
+ 
+/* ========================= 
+   CADASTRO / LOGIN 
+========================= */ 
  
 .tela-cadastro { 
     min-height: 100vh; 
@@ -151,6 +175,7 @@ body {
     z-index: 1; 
 } 
  
+ 
 .cadastro-box h1 { 
     font-size: 24px; 
  
@@ -162,6 +187,7 @@ body {
  
     color: #ffffff; 
 } 
+ 
  
 .cadastro-box h2 { 
     font-size: 32px; 
@@ -175,6 +201,7 @@ body {
     color: #ffb900; 
 } 
  
+ 
 .cadastro-box p { 
     text-align: center; 
  
@@ -187,11 +214,13 @@ body {
     margin-bottom: 30px; 
 } 
  
+ 
 .cadastro-box form { 
     display: flex; 
  
     flex-direction: column; 
 } 
+ 
  
 .cadastro-box label { 
     margin-bottom: 7px; 
@@ -202,6 +231,7 @@ body {
  
     color: #ffffff; 
 } 
+ 
  
 .cadastro-box input { 
     width: 100%; 
@@ -223,11 +253,13 @@ body {
     outline: none; 
 } 
  
+ 
 .cadastro-box input:focus { 
     border-color: #ffb900; 
  
     box-shadow: 0 0 0 2px rgba(255, 185, 0, 0.10); 
 } 
+ 
  
 .cadastro-box button { 
     width: 100%; 
@@ -253,6 +285,7 @@ body {
     transition: 0.3s ease; 
 } 
  
+ 
 .cadastro-box button:hover { 
     background-color: #ffc933; 
  
@@ -261,7 +294,8 @@ body {
     box-shadow: 0 10px 25px rgba(255, 185, 0, 0.20); 
 } 
  
-.logar{ 
+ 
+.logar { 
     display: block; 
  
     margin-top: 25px; 
@@ -273,13 +307,13 @@ body {
     text-decoration: none; 
  
     font-size: 14px; 
- 
 } 
  
-.logar:hover{ 
+ 
+.logar:hover { 
     color: #ffb900; 
- 
 } 
+ 
  
 .voltar { 
     display: block; 
@@ -295,9 +329,15 @@ body {
     font-size: 14px; 
 } 
  
+ 
 .voltar:hover { 
     color: #ffb900; 
 } 
+ 
+ 
+/* ========================= 
+   CABEÇALHO 
+========================= */ 
  
 .cabecalho { 
     height: 75px; 
@@ -316,16 +356,22 @@ body {
     z-index: 10; 
 } 
  
+ 
 .logo { 
     font-size: 20px; 
+ 
     font-weight: 900; 
+ 
     letter-spacing: 2px; 
 } 
  
+ 
 .cabecalho nav { 
     display: flex; 
+ 
     gap: 30px; 
 } 
+ 
  
 .cabecalho nav a { 
     color: #d9dee7; 
@@ -333,24 +379,30 @@ body {
     text-decoration: none; 
  
     font-size: 14px; 
+ 
     font-weight: bold; 
  
     transition: 0.3s; 
 } 
  
+ 
 .cabecalho nav a:hover { 
     color: #ffb900; 
 } 
  
+ 
 .usuario { 
     display: flex; 
+ 
     align-items: center; 
+ 
     gap: 15px; 
  
     color: #d9dee7; 
  
     font-size: 13px; 
 } 
+ 
  
 .usuario a { 
     color: #ffb900; 
@@ -360,35 +412,59 @@ body {
     font-weight: bold; 
 } 
  
+ 
+/* ========================= 
+   HOME 
+========================= */ 
+ 
 .home { 
+    width: 100%; 
+ 
+    min-height: calc(100vh - 75px); 
+ 
+    margin: 0; 
+ 
+    padding: 0; 
+ 
     background-color: #050b16; 
 } 
  
+ 
 .hero { 
-    min-height: 580px; 
+    width: 100%; 
+ 
+    height: calc(100vh - 75px); 
+ 
+    min-height: 0; 
  
     display: flex; 
+ 
     align-items: center; 
  
     padding: 70px; 
  
-    background-image: 
-        linear-gradient( 
-            90deg, 
-            rgba(3, 8, 18, 0.95) 0%, 
-            rgba(3, 8, 18, 0.65) 50%, 
-            rgba(3, 8, 18, 0.15) 100% 
-        ), 
-        url('fundo-dragon-ball.png'); 
+    position: relative; 
+ 
+    overflow: hidden; 
+ 
+    box-sizing: border-box; 
  
     background-size: cover; 
+ 
     background-position: center; 
+ 
     background-repeat: no-repeat; 
 } 
  
+ 
 .hero-conteudo { 
     width: 600px; 
+ 
+    position: relative; 
+ 
+    z-index: 2; 
 } 
+ 
  
 .hero-conteudo span { 
     color: #ffb900; 
@@ -400,8 +476,10 @@ body {
     letter-spacing: 3px; 
 } 
  
+ 
 .hero-conteudo h1 { 
     margin-top: 20px; 
+ 
     margin-bottom: 25px; 
  
     font-size: 58px; 
@@ -411,7 +489,10 @@ body {
     font-weight: 900; 
  
     font-style: italic; 
+ 
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); 
 } 
+ 
  
 .hero-conteudo p { 
     max-width: 500px; 
@@ -423,11 +504,21 @@ body {
     font-size: 17px; 
  
     line-height: 1.7; 
+ 
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
 } 
+ 
+ 
+/* ========================= 
+   CATEGORIAS 
+========================= */ 
  
 .categorias { 
     padding: 60px 70px; 
+ 
+    background-color: #050b16; 
 } 
+ 
  
 .categorias h2 { 
     margin-bottom: 30px; 
@@ -437,13 +528,17 @@ body {
     letter-spacing: 2px; 
 } 
  
+ 
 .cards { 
     display: flex; 
  
     gap: 20px; 
 } 
  
+ 
 .card { 
+    display: block; 
+ 
     flex: 1; 
  
     padding: 30px; 
@@ -463,6 +558,7 @@ body {
     transition: 0.3s; 
 } 
  
+ 
 .card:hover { 
     transform: translateY(-5px); 
  
@@ -471,17 +567,27 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35); 
 } 
  
+ 
 .icone { 
     font-size: 32px; 
  
     margin-bottom: 20px; 
 } 
  
+ 
 .card h3 { 
     margin-bottom: 10px; 
  
     font-size: 18px; 
+ 
+    color: #ffffff; 
 } 
+ 
+ 
+.card:hover h3 { 
+    color: #ffb900; 
+} 
+ 
  
 .card p { 
     color: #aeb7c5; 
@@ -491,136 +597,98 @@ body {
     line-height: 1.5; 
 } 
  
-.home { 
+ 
+/* ========================= 
+   PERSONAGENS 
+========================= */ 
+ 
+.pagina-personagens { 
     min-height: calc(100vh - 75px); 
-    background-color: #050b16; 
-} 
- 
-.cabecalho { 
-    position: relative; 
-    z-index: 10; 
-} 
- 
-.hero { 
-    .hero { 
-    min-height: 580px; 
- 
-    display: flex; 
-    align-items: center; 
  
     padding: 70px; 
  
-    position: relative; 
-    overflow: hidden; 
- 
     background-image: 
         linear-gradient( 
-            90deg, 
-            rgba(3, 8, 18, 0.98) 0%, 
-            rgba(3, 8, 18, 0.85) 30%, 
-            rgba(3, 8, 18, 0.35) 60%, 
-            rgba(3, 8, 18, 0.05) 100% 
+            rgba(3, 8, 18, 0.70), 
+            rgba(3, 8, 18, 0.85) 
         ), 
-        url('fundo-home.png'); 
+        url("fundo-formulario.png"); 
  
     background-size: cover; 
+ 
     background-position: center; 
+ 
     background-repeat: no-repeat; 
-} 
+ 
+    background-attachment: fixed; 
 } 
  
-.hero-conteudo { 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.hero-conteudo h1 { 
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); 
-} 
- 
-.hero-conteudo p { 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
-} 
- 
-.categorias { 
-    background-color: #050b16; 
-} 
- 
-.card { 
-    display: block; 
-} 
- 
-.card h3 { 
-    color: #ffffff; 
-} 
- 
-.card:hover h3 { 
-    color: #ffb900; 
-} 
- 
-.pagina-personagens {
-    min-height: calc(100vh - 75px);
-    padding: 70px;
-
-    background-image:
-        linear-gradient(
-            rgba(3, 8, 18, 0.70),
-            rgba(3, 8, 18, 0.85)
-        ),
-        url("fundo-formulario.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
  
 .topo-personagens { 
     max-width: 1200px; 
+ 
     margin: 0 auto 50px; 
 } 
  
+ 
 .topo-personagens span { 
     color: #ffb900; 
+ 
     font-size: 13px; 
+ 
     font-weight: 800; 
+ 
     letter-spacing: 3px; 
 } 
  
+ 
 .topo-personagens h1 { 
     margin-top: 15px; 
+ 
     margin-bottom: 15px; 
  
     font-size: 58px; 
+ 
     font-weight: 900; 
+ 
     font-style: italic; 
+ 
     letter-spacing: 2px; 
 } 
  
+ 
 .topo-personagens p { 
     color: #aeb7c5; 
+ 
     font-size: 16px; 
 } 
  
+ 
 .lista-personagens { 
     max-width: 1200px; 
+ 
     margin: 0 auto; 
  
     display: grid; 
+ 
     grid-template-columns: repeat(3, 1fr); 
+ 
     gap: 25px; 
 } 
+ 
  
 .card-personagem { 
     background-color: #0d1626; 
  
     border: 1px solid #24334a; 
+ 
     border-radius: 12px; 
  
     overflow: hidden; 
  
     transition: 0.3s ease; 
 } 
+ 
  
 .card-personagem:hover { 
     transform: translateY(-6px); 
@@ -630,8 +698,10 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
 } 
  
+ 
 .imagem-personagem { 
     width: 100%; 
+ 
     height: 330px; 
  
     background-color: #111a2b; 
@@ -639,8 +709,10 @@ body {
     overflow: hidden; 
 } 
  
+ 
 .imagem-personagem img { 
     width: 100%; 
+ 
     height: 100%; 
  
     object-fit: cover; 
@@ -650,29 +722,35 @@ body {
     transition: 0.3s ease; 
 } 
  
+ 
 .card-personagem:hover .imagem-personagem img { 
     transform: scale(1.05); 
 } 
  
-
  
 .imagem-personagem .sem-imagem { 
     width: 100%; 
+ 
     height: 100%; 
  
     display: flex; 
+ 
     align-items: center; 
+ 
     justify-content: center; 
  
     color: #7f8999; 
  
     font-size: 13px; 
+ 
     font-weight: bold; 
 } 
-
+ 
+ 
 .info-personagem { 
     padding: 25px; 
 } 
+ 
  
 .info-personagem h2 { 
     margin-bottom: 20px; 
@@ -680,9 +758,12 @@ body {
     color: #ffffff; 
  
     font-size: 24px; 
+ 
     font-weight: 900; 
+ 
     font-style: italic; 
 } 
+ 
  
 .info-personagem p { 
     margin-bottom: 10px; 
@@ -692,16 +773,18 @@ body {
     font-size: 14px; 
 } 
  
+ 
 .info-personagem strong { 
     color: #ffb900; 
 } 
-
+ 
  
 .info-personagem .botao { 
     width: 100%; 
  
     margin-top: 15px; 
 } 
+ 
  
 .nenhum-personagem { 
     grid-column: 1 / -1; 
@@ -713,8 +796,10 @@ body {
     background-color: #0d1626; 
  
     border: 1px solid #24334a; 
+ 
     border-radius: 12px; 
 } 
+ 
  
 .nenhum-personagem h2 { 
     margin-bottom: 15px; 
@@ -722,345 +807,1318 @@ body {
     color: #ffffff; 
 } 
  
+ 
 .nenhum-personagem p { 
     color: #aeb7c5; 
 } 
+ 
+ 
+/* ========================= 
+   PERFIL DO PERSONAGEM 
+========================= */ 
+ 
+.perfil-personagem { 
+    min-height: calc(100vh - 75px); 
+ 
+    padding: 70px; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(3, 8, 18, 0.70), 
+            rgba(3, 8, 18, 0.85) 
+        ), 
+        url("fundo-formulario.png"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    background-repeat: no-repeat; 
+ 
+    background-attachment: fixed; 
+} 
+ 
+ 
+.perfil-conteudo { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 500px 1fr; 
+ 
+    gap: 60px; 
+ 
+    align-items: center; 
+} 
+ 
+ 
+.perfil-imagem { 
+    width: 100%; 
+ 
+    height: 600px; 
+ 
+    background-color: #111a2b; 
+ 
+    border: 1px solid #24334a; 
+ 
+    border-radius: 12px; 
+ 
+    overflow: hidden; 
+} 
+ 
+ 
+.perfil-imagem img { 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    object-position: center; 
+ 
+    display: block; 
+} 
+ 
+ 
+.perfil-informacoes span { 
+    color: #ffb900; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: 800; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+.perfil-informacoes h1 { 
+    margin-top: 15px; 
+ 
+    margin-bottom: 40px; 
+ 
+    font-size: 58px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+ 
+    letter-spacing: 2px; 
+} 
+ 
+ 
+.informacao { 
+    padding: 18px 0; 
+ 
+    border-bottom: 1px solid #24334a; 
+} 
+ 
+ 
+.informacao strong { 
+    display: block; 
+ 
+    color: #ffb900; 
+ 
+    font-size: 12px; 
+ 
+    letter-spacing: 2px; 
+ 
+    margin-bottom: 7px; 
+} 
+ 
+ 
+.informacao p { 
+    color: #d9dee7; 
+ 
+    font-size: 17px; 
+} 
+ 
+ 
+/* ========================= 
+   RECURSOS IA 
+========================= */ 
+ 
+.recursos-ia { 
+    max-width: 1200px; 
+ 
+    margin: 70px auto 0; 
+ 
+    padding-top: 50px; 
+ 
+    border-top: 1px solid #24334a; 
+} 
+ 
+ 
+.recursos-ia span { 
+    color: #ffb900; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: 800; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+.recursos-ia h2 { 
+    margin-top: 15px; 
+ 
+    margin-bottom: 30px; 
+ 
+    font-size: 30px; 
+ 
+    font-weight: 900; 
+} 
+ 
+ 
+.ia-botoes { 
+    display: flex; 
+ 
+    gap: 15px; 
+ 
+    flex-wrap: wrap; 
+} 
+ 
+ 
+.ia-botoes button { 
+    padding: 15px 22px; 
+ 
+    background-color: #0d1626; 
+ 
+    border: 1px solid #24334a; 
+ 
+    border-radius: 8px; 
+ 
+    color: white; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: bold; 
+ 
+    cursor: pointer; 
+ 
+    transition: 0.3s; 
+} 
+ 
+ 
+.ia-botoes button:hover { 
+    background-color: #ffb900; 
+ 
+    border-color: #ffb900; 
+ 
+    color: #050b16; 
+} 
+ 
+ 
+/* ========================= 
+   TÉCNICAS 
+========================= */ 
+ 
+.pagina-tecnicas { 
+    min-height: calc(100vh - 75px); 
+ 
+    background-color: #050b16; 
+ 
+    padding-bottom: 70px; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(3, 8, 18, 0.70), 
+            rgba(3, 8, 18, 0.85) 
+        ), 
+        url("fundo-formulario.png"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    background-repeat: no-repeat; 
+} 
+ 
+ 
+/* BANNER */ 
+ 
+.banner-tecnicas { 
+    min-height: 300px; 
+ 
+    position: relative; 
+ 
+    overflow: hidden; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    padding: 60px 70px; 
+ 
+    background: 
+        linear-gradient( 
+            90deg, 
+            rgba(3, 8, 18, 0.98) 0%, 
+            rgba(3, 8, 18, 0.90) 35%, 
+            rgba(3, 8, 18, 0.45) 70%, 
+            rgba(3, 8, 18, 0.20) 100% 
+        ), 
+        url("fundo-formulario.png"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    background-repeat: no-repeat; 
+ 
+    border-bottom: 1px solid #24334a; 
+} 
+ 
+ 
+.banner-conteudo { 
+    position: relative; 
+ 
+    z-index: 2; 
+ 
+    max-width: 600px; 
+} 
+ 
+ 
+.banner-conteudo span { 
+    color: #ffb900; 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 900; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+.banner-conteudo h1 { 
+    margin-top: 12px; 
+ 
+    margin-bottom: 18px; 
+ 
+    font-size: 64px; 
+ 
+    line-height: 0.95; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+ 
+    letter-spacing: 2px; 
+} 
+ 
+ 
+.banner-conteudo p { 
+    color: #d0d6df; 
+ 
+    font-size: 16px; 
+ 
+    line-height: 1.5; 
+ 
+    margin-bottom: 5px; 
+} 
+ 
+ 
+.banner-efeito { 
+    position: absolute; 
+ 
+    width: 450px; 
+ 
+    height: 450px; 
+ 
+    right: 80px; 
+ 
+    top: -100px; 
+ 
+    border-radius: 50%; 
+ 
+    background: 
+        radial-gradient( 
+            circle, 
+            rgba(255, 185, 0, 0.15), 
+            transparent 65% 
+        ); 
+ 
+    pointer-events: none; 
+} 
+ 
+ 
+/* FILTROS */ 
+ 
+.filtros-tecnicas { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto; 
+ 
+    padding: 25px 0; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    gap: 30px; 
+} 
+ 
+ 
+.pesquisa-tecnicas { 
+    flex: 1; 
+ 
+    height: 50px; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    padding: 0 18px; 
+ 
+    background-color: #0d1626; 
+ 
+    border: 1px solid #293950; 
+ 
+    border-radius: 8px; 
+} 
+ 
+ 
+.pesquisa-tecnicas span { 
+    margin-right: 12px; 
+ 
+    font-size: 20px; 
+ 
+    color: #9ba6b7; 
+} 
+ 
+ 
+.pesquisa-tecnicas input { 
+    width: 100%; 
+ 
+    border: none; 
+ 
+    outline: none; 
+ 
+    background: transparent; 
+ 
+    color: white; 
+ 
+    font-size: 14px; 
+} 
+ 
+ 
+.pesquisa-tecnicas input::placeholder { 
+    color: #7f8999; 
+} 
+ 
+ 
+.categorias-tecnicas { 
+    display: flex; 
+ 
+    gap: 10px; 
+} 
+ 
+ 
+.categorias-tecnicas button { 
+    padding: 13px 18px; 
+ 
+    border: 1px solid #26354a; 
+ 
+    border-radius: 7px; 
+ 
+    background-color: #0d1626; 
+ 
+    color: #d9dee7; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: bold; 
+ 
+    cursor: pointer; 
+ 
+    transition: 0.3s; 
+} 
+ 
+ 
+.categorias-tecnicas button:hover { 
+    border-color: #ffb900; 
+ 
+    color: #ffb900; 
+} 
+ 
+ 
+.categorias-tecnicas .categoria-ativa { 
+    background-color: #ffb900; 
+ 
+    border-color: #ffb900; 
+ 
+    color: #080b12; 
+} 
+ 
+ 
+/* LISTA DE TÉCNICAS */ 
+ 
+.lista-tecnicas { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    gap: 22px; 
+} 
+ 
+ 
+/* CARD DE TÉCNICA */ 
+ 
+.card-tecnica { 
+    overflow: hidden; 
+ 
+    background-color: #0b1525; 
+ 
+    border: 1px solid #26374e; 
+ 
+    border-radius: 10px; 
+ 
+    transition: 0.3s ease; 
+} 
+ 
+ 
+.card-tecnica:hover { 
+    transform: translateY(-5px); 
+ 
+    border-color: #ffb900; 
+ 
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.40); 
+} 
+ 
+ 
+/* IMAGEM */ 
+ 
+.imagem-tecnica { 
+    width: 100%; 
+ 
+    height: 330px; 
+ 
+    background-color: #111a2b; 
+ 
+    overflow: hidden; 
+} 
+ 
+ 
+.imagem-tecnica img { 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    display: block; 
+ 
+    transition: 0.3s ease; 
+} 
+ 
+ 
+.card-tecnica:hover .imagem-tecnica img { 
+    transform: scale(1.05); 
+} 
+ 
+ 
+.numero-tecnica { 
+    position: absolute; 
+ 
+    top: 12px; 
+ 
+    right: 12px; 
+ 
+    width: 32px; 
+ 
+    height: 32px; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    background-color: #ffb900; 
+ 
+    color: #080b12; 
+ 
+    border-radius: 7px; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: 900; 
+} 
+ 
+ 
+/* CONTEÚDO */ 
+ 
+.conteudo-tecnica { 
+    padding: 22px; 
+} 
+ 
+ 
+.tipo-tecnica { 
+    display: inline-block; 
+ 
+    padding: 5px 10px; 
+ 
+    margin-bottom: 10px; 
+ 
+    border-radius: 20px; 
+ 
+    background-color: #1267b5; 
+ 
+    color: white; 
+ 
+    font-size: 10px; 
+ 
+    font-weight: 900; 
+ 
+    letter-spacing: 0.5px; 
+} 
+ 
+ 
+.tipo-tecnica.especial { 
+    background-color: #7027b8; 
+} 
+ 
+ 
+.tipo-tecnica.aumento { 
+    background-color: #a52335; 
+} 
+ 
+ 
+.conteudo-tecnica h2 { 
+    margin-bottom: 10px; 
+ 
+    color: white; 
+ 
+    font-size: 25px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+} 
+ 
+ 
+.conteudo-tecnica p { 
+    min-height: 60px; 
+ 
+    margin-bottom: 20px; 
+ 
+    color: #aeb7c5; 
+ 
+    font-size: 13px; 
+ 
+    line-height: 1.55; 
+} 
+ 
+ 
+/* DADOS */ 
+ 
+.dados-tecnica { 
+    display: grid; 
+ 
+    grid-template-columns: 1fr 1fr; 
+ 
+    gap: 15px; 
+ 
+    padding: 15px 0; 
+ 
+    border-top: 1px solid #253449; 
+} 
+ 
+ 
+.dados-tecnica div { 
+    display: flex; 
+ 
+    flex-direction: column; 
+ 
+    gap: 5px; 
+} 
+ 
+ 
+.dados-tecnica strong { 
+    color: #aeb7c5; 
+ 
+    font-size: 10px; 
+ 
+    font-weight: 800; 
+} 
+ 
+ 
+.dados-tecnica span { 
+    color: #ffffff; 
+ 
+    font-size: 11px; 
+ 
+    line-height: 1.4; 
+} 
+ 
+ 
+/* BOTÃO */ 
+ 
+.botao-ver-tecnica { 
+    width: 100%; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    gap: 10px; 
+ 
+    margin-top: 8px; 
+ 
+    padding: 13px; 
+ 
+    background-color: #ffb900; 
+ 
+    border-radius: 7px; 
+ 
+    color: #080b12; 
+ 
+    text-decoration: none; 
+ 
+    font-size: 12px; 
+ 
+    font-weight: 900; 
+ 
+    transition: 0.3s; 
+} 
+ 
+ 
+.botao-ver-tecnica:hover { 
+    background-color: #ffc933; 
+ 
+    transform: translateY(-2px); 
+} 
+ 
+ 
+.botao-ver-tecnica span { 
+    font-size: 16px; 
+} 
+ 
+ 
+/* ========================= 
+   TRANSFORMAÇÕES 
+========================= */ 
+ 
+.pagina-transformacoes { 
+    min-height: calc(100vh - 75px); 
+ 
+    padding: 70px; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(3, 8, 18, 0.75), 
+            rgba(3, 8, 18, 0.90) 
+        ), 
+        url("fundo-formulario.png"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    background-repeat: no-repeat; 
+} 
+ 
+ 
+.topo-transformacoes { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto 45px; 
+} 
+ 
+ 
+.topo-transformacoes span { 
+    color: #ffb900; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: bold; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+.topo-transformacoes h1 { 
+    margin-top: 15px; 
+ 
+    margin-bottom: 15px; 
+ 
+    color: white; 
+ 
+    font-size: 58px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+} 
+ 
+ 
+.topo-transformacoes p { 
+    color: #aeb7c5; 
+ 
+    font-size: 16px; 
+} 
+ 
+ 
+.cards-transformacoes { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    gap: 25px; 
+} 
+ 
+ 
+.card-transformacao { 
+    position: relative; 
+ 
+    min-height: 300px; 
+ 
+    padding: 30px; 
+ 
+    background-color: #0d1626; 
+ 
+    border: 1px solid #24334a; 
+ 
+    border-radius: 12px; 
+ 
+    transition: 0.3s ease; 
+ 
+    overflow: hidden; 
+} 
+ 
+ 
+.card-transformacao:hover { 
+    transform: translateY(-6px); 
+ 
+    border-color: #ffb900; 
+ 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); 
+} 
+ 
+ 
+.numero-card { 
+    position: absolute; 
+ 
+    top: 18px; 
+ 
+    right: 22px; 
+ 
+    color: #26344a; 
+ 
+    font-size: 45px; 
+ 
+    font-weight: 900; 
+} 
+ 
+ 
+.card-transformacao h2 { 
+    position: relative; 
+ 
+    margin-top: 35px; 
+ 
+    margin-bottom: 18px; 
+ 
+    color: #ffb900; 
+ 
+    font-size: 24px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+} 
+ 
+ 
+.card-transformacao > p { 
+    color: #d9dee7; 
+ 
+    font-size: 14px; 
+ 
+    line-height: 1.7; 
+} 
+ 
+ 
+.card-informacao { 
+    margin-top: 30px; 
+ 
+    padding-top: 18px; 
+ 
+    border-top: 1px solid #24334a; 
+} 
+ 
+ 
+.card-informacao strong { 
+    display: block; 
+ 
+    margin-bottom: 7px; 
+ 
+    color: #ffb900; 
+ 
+    font-size: 11px; 
+ 
+    letter-spacing: 2px; 
+} 
+ 
+ 
+.card-informacao span { 
+    color: #aeb7c5; 
+ 
+    font-size: 14px; 
+} 
+ 
+ 
+/* ========================= 
+   SAGAS 
+========================= */ 
+ 
+.pagina-sagas { 
+    min-height: calc(100vh - 75px); 
+ 
+    padding: 70px; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(3, 8, 18, 0.75), 
+            rgba(3, 8, 18, 0.90) 
+        ), 
+        url("fundo-formulario.png"); 
+ 
+    background-size: cover; 
+ 
+    background-position: center; 
+ 
+    background-repeat: no-repeat; 
+} 
+ 
+ 
+.topo-sagas { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto 50px; 
+} 
+ 
+ 
+.topo-sagas span { 
+    color: #ffb900; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: bold; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+.topo-sagas h1 { 
+    margin-top: 15px; 
+ 
+    margin-bottom: 15px; 
+ 
+    color: white; 
+ 
+    font-size: 58px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+} 
+ 
+ 
+.topo-sagas p { 
+    color: #aeb7c5; 
+ 
+    font-size: 16px; 
+ 
+    line-height: 1.7; 
+} 
+ 
+ 
+/* GRID DOS CARDS */ 
+ 
+.cards-sagas { 
+    max-width: 1200px; 
+ 
+    margin: 0 auto; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    gap: 25px; 
+} 
+ 
+ 
+/* CARD */ 
+ 
+.card-saga { 
+    background-color: #0d1626; 
+ 
+    border: 1px solid #24334a; 
+ 
+    border-radius: 12px; 
+ 
+    overflow: hidden; 
+ 
+    transition: 0.3s ease; 
+} 
+ 
+ 
+.card-saga:hover { 
+    transform: translateY(-7px); 
+ 
+    border-color: #ffb900; 
+ 
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4); 
+} 
+ 
+ 
+/* IMAGEM */ 
+ 
+.imagem-saga { 
+    width: 100%; 
+ 
+    height: 230px; 
+ 
+    background-color: #080f1d; 
+ 
+    overflow: hidden; 
+} 
+ 
+ 
+.imagem-saga img { 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    object-position: center; 
+ 
+    display: block; 
+ 
+    transition: 0.4s ease; 
+} 
+ 
+ 
+.card-saga:hover .imagem-saga img { 
+    transform: scale(1.05); 
+} 
+ 
+ 
+/* SEM IMAGEM */ 
+ 
+.sem-imagem { 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    color: #647187; 
+ 
+    font-size: 12px; 
+ 
+    font-weight: bold; 
+ 
+    letter-spacing: 2px; 
+} 
+ 
+ 
+/* CONTEÚDO */ 
+ 
+.conteudo-saga { 
+    padding: 25px; 
+} 
+ 
+ 
+/* ARQUIVO */ 
+ 
+.numero-saga { 
+    display: block; 
+ 
+    margin-bottom: 10px; 
+ 
+    color: #647187; 
+ 
+    font-size: 10px; 
+ 
+    font-weight: bold; 
+ 
+    letter-spacing: 2px; 
+} 
+ 
+ 
+/* SÉRIE */ 
+ 
+.serie-saga { 
+    display: block; 
+ 
+    color: #ffb900; 
+ 
+    font-size: 11px; 
+ 
+    font-weight: bold; 
+ 
+    letter-spacing: 3px; 
+} 
+ 
+ 
+/* TÍTULO */ 
+ 
+.conteudo-saga h2 { 
+    margin-top: 12px; 
+ 
+    margin-bottom: 15px; 
+ 
+    color: white; 
+ 
+    font-size: 24px; 
+ 
+    font-weight: 900; 
+ 
+    font-style: italic; 
+ 
+    line-height: 1.2; 
+} 
+ 
+ 
+/* LINHA */ 
+ 
+.linha-saga { 
+    width: 55px; 
+ 
+    height: 2px; 
+ 
+    margin-bottom: 18px; 
+ 
+    background-color: #ffb900; 
+} 
+ 
+ 
+/* DESCRIÇÃO */ 
+ 
+.conteudo-saga p { 
+    color: #c4cbd6; 
+ 
+    font-size: 14px; 
+ 
+    line-height: 1.7; 
+} 
+ 
+ 
+/* NENHUMA SAGA */ 
+ 
+.nenhuma-saga { 
+    grid-column: 1 / -1; 
+ 
+    padding: 60px; 
+ 
+    text-align: center; 
+ 
+    background-color: #0d1626; 
+ 
+    border: 1px solid #24334a; 
+ 
+    border-radius: 12px; 
+} 
+ 
+ 
+.nenhuma-saga h2 { 
+    margin-bottom: 10px; 
+ 
+    color: white; 
+} 
+ 
+ 
+.nenhuma-saga p { 
+    color: #aeb7c5; 
+} 
 
-.perfil-personagem {
-    min-height: calc(100vh - 75px);
-    padding: 70px;
 
-    background-image:
-        linear-gradient(
-            rgba(3, 8, 18, 0.70),
-            rgba(3, 8, 18, 0.85)
-        ),
-        url("fundo-formulario.png");
+/* =========================================
+   DESTAQUES DA HOME
+========================================= */
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-.perfil-conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 500px 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.perfil-imagem {
+.destaques-home {
     width: 100%;
-    height: 600px;
 
-    background-color: #111a2b;
+    padding: 60px 70px 70px 70px;
 
-    border: 1px solid #24334a;
-    border-radius: 12px;
+    background-color: #050b16;
 
-    overflow: hidden;
-}
-
-.perfil-imagem img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-}
-
-.perfil-informacoes span {
-    color: #ffb900;
-
-    font-size: 13px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-}
-
-.perfil-informacoes h1 {
-    margin-top: 15px;
-    margin-bottom: 40px;
-
-    font-size: 58px;
-    font-weight: 900;
-
-    font-style: italic;
-    letter-spacing: 2px;
+    border-top: 1px solid #24334a;
 }
 
 
-.informacao {
-    padding: 18px 0;
+/* TÍTULO DA SEÇÃO */
 
-    border-bottom: 1px solid #24334a;
+.topo-destaques {
+    width: 1200px;
+
+    max-width: 100%;
+
+    margin: 0 auto 30px auto;
 }
 
-.informacao strong {
+.topo-destaques span {
     display: block;
 
     color: #ffb900;
 
     font-size: 12px;
-    letter-spacing: 2px;
 
-    margin-bottom: 7px;
-}
-
-.informacao p {
-    color: #d9dee7;
-
-    font-size: 17px;
-}
-
-
-.recursos-ia {
-    max-width: 1200px;
-
-    margin: 70px auto 0;
-
-    padding-top: 50px;
-
-    border-top: 1px solid #24334a;
-}
-
-.recursos-ia span {
-    color: #ffb900;
-
-    font-size: 13px;
     font-weight: 800;
 
     letter-spacing: 3px;
 }
 
-.recursos-ia h2 {
-    margin-top: 15px;
-    margin-bottom: 30px;
+.topo-destaques h2 {
+    margin-top: 12px;
 
-    font-size: 30px;
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
     font-weight: 900;
-}
 
-
-.ia-botoes {
-    display: flex;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.ia-botoes button {
-    padding: 15px 22px;
-
-    background-color: #0d1626;
-
-    border: 1px solid #24334a;
-    border-radius: 8px;
-
-    color: white;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.ia-botoes button:hover {
-    background-color: #ffb900;
-
-    border-color: #ffb900;
-
-    color: #050b16;
-}
-
-
-
-
-.voltar {
-    display: block;
-
-    max-width: 1200px;
-
-    margin: 40px auto 0;
-
-    color: #ffb900;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: bold;
+    font-style: italic;
 
     letter-spacing: 1px;
-
-    transition: 0.3s;
 }
 
-.voltar:hover {
-    color: white;
-}
+.topo-destaques p {
+    margin: 0;
 
-
-
-
-
-
-/* =========================
-   TÉCNICAS
-========================= */
-
-.pagina-tecnicas {
-    min-height: calc(100vh - 75px);
-    padding: 70px;
-
-    background-image:
-        linear-gradient(
-            rgba(3, 8, 18, 0.70),
-            rgba(3, 8, 18, 0.85)
-        ),
-        url("fundo-formulario.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-/* =========================
-   TOPO
-========================= */
-
-.topo-tecnicas {
-    max-width: 1200px;
-    margin: 0 auto 45px;
-}
-
-.topo-tecnicas span {
-    color: #ffb900;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.topo-tecnicas h1 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-    color: white;
-    font-size: 58px;
-    font-weight: 900;
-    font-style: italic;
-}
-
-.topo-tecnicas p {
     color: #aeb7c5;
-    font-size: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =========================================
+   ÁREA DOS CARDS
+========================================= */
 
-.cards-tecnicas {
-    max-width: 1200px;
+.cards-destaques {
+    width: 1200px;
+
+    max-width: 100%;
+
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
 }
 
-.card-tecnica {
-    min-height: 270px;
 
-    padding: 30px;
+/* =========================================
+   CARD
+========================================= */
+
+.card-destaque {
+    min-height: 190px;
+
+    padding: 25px;
 
     background-color: #0d1626;
 
     border: 1px solid #24334a;
-    border-radius: 12px;
 
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
 
     transition: 0.3s ease;
 }
 
-.card-tecnica:hover {
-    transform: translateY(-6px);
+.card-destaque:hover {
+    transform: translateY(-5px);
 
     border-color: #ffb900;
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 
-/* =========================
-   NOME DA TÉCNICA
-========================= */
+/* NÚMERO */
 
-.card-tecnica h2 {
-    margin-bottom: 18px;
-
-    color: #ffb900;
-
-    font-size: 25px;
-    font-weight: 900;
-
-    font-style: italic;
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   DESCRIÇÃO
-========================= */
-
-.card-tecnica p {
-    color: #d9dee7;
-
-    font-size: 14px;
-    line-height: 1.7;
-
-    margin-bottom: 25px;
-}
-
-
-
-.tecnica-detalhe {
-    margin-top: auto;
-
-    padding-top: 18px;
-
-    border-top: 1px solid #24334a;
-}
-
-.tecnica-detalhe strong {
+.card-destaque > span {
     display: block;
 
-    margin-bottom: 7px;
+    color: #647187;
 
-    color: #ffb900;
+    font-size: 10px;
 
-    font-size: 11px;
+    font-weight: bold;
+
     letter-spacing: 2px;
 }
 
-.tecnica-detalhe span {
+
+/* TÍTULO */
+
+.card-destaque h3 {
+    margin-top: 18px;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    font-style: italic;
+
+    line-height: 1.2;
+}
+
+
+/* TEXTO */
+
+.card-destaque p {
+    margin: 0;
+
     color: #aeb7c5;
 
-    font-size: 14px;
+    font-size: 13px;
+
+    line-height: 1.6;
 }
+
+
+/* LINHA AMARELA */
+
+.linha-destaque {
+    width: 40px;
+
+    height: 2px;
+
+    margin-top: 20px;
+
+    background-color: #ffb900;
+}
+
+
