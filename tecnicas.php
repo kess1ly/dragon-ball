@@ -7,25 +7,27 @@ if (!isset($_SESSION["usuario_id"])) {
     exit;
 }
 
+require_once "conexao.php";
+
+$sql = "SELECT * FROM tecnicas ORDER BY id ASC";
+
+$resultado = $conexao->query($sql);
+
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Técnicas - Dragon Ball Archive</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-
 
 <header class="cabecalho">
 
@@ -34,27 +36,11 @@ if (!isset($_SESSION["usuario_id"])) {
     </div>
 
     <nav>
-
-        <a href="home.php">
-            Início
-        </a>
-
-        <a href="personagens.php">
-            Personagens
-        </a>
-
-        <a href="tecnicas.php">
-            Técnicas
-        </a>
-
-        <a href="transformacoes.php">
-            Transformações
-        </a>
-
-        <a href="sagas.php">
-            Sagas
-        </a>
-
+        <a href="home.php">Início</a>
+        <a href="personagens.php">Personagens</a>
+        <a href="tecnicas.php">Técnicas</a>
+        <a href="transformacoes.php">Transformações</a>
+        <a href="sagas.php">Sagas</a>
     </nav>
 
     <div class="usuario">
@@ -62,9 +48,7 @@ if (!isset($_SESSION["usuario_id"])) {
         Olá,
         <?php echo htmlspecialchars($_SESSION["usuario_nome"]); ?>
 
-        <a href="logout.php">
-            Sair
-        </a>
+        <a href="logout.php">Sair</a>
 
     </div>
 
@@ -73,183 +57,210 @@ if (!isset($_SESSION["usuario_id"])) {
 
 <main class="pagina-tecnicas">
 
-    <section class="topo-tecnicas">
 
-        <span>
-            DRAGON BALL ARCHIVE
-        </span>
+    <!-- CABEÇALHO DA PÁGINA -->
 
-        <h1>
-            TÉCNICAS
-        </h1>
+    <section class="banner-tecnicas">
 
-        <p>
-            Conheça algumas das principais técnicas do universo Dragon Ball.
-        </p>
+        <div class="conteudo-banner">
+
+            <span>DRAGON BALL ARCHIVE</span>
+
+            <h1>TÉCNICAS</h1>
+
+            <p>
+                Conheça as técnicas e habilidades que marcaram
+                o universo Dragon Ball.
+            </p>
+
+        </div>
 
     </section>
 
 
-    <section class="cards-tecnicas">
+    <!-- FILTROS -->
+
+    <section class="filtros-tecnicas">
+
+        <div class="campo-busca">
+
+            <input
+                type="text"
+                placeholder="Pesquisar técnica..."
+            >
+
+        </div>
+
+        <div class="categorias-tecnicas">
+
+            <button> TODAS </button>
+            <button> ENERGIA </button>
+            <button> ATAQUE </button>
+            <button> AMPLIFICAÇÃO </button>
+
+        </div>
+
+    </section>
 
 
-        <article class="card-tecnica">
+    <!-- LISTA DE TÉCNICAS -->
 
-            <h2>
-                KAMEHAMEHA
-            </h2>
+    <section class="lista-tecnicas">
 
-            <p>
-                Uma poderosa técnica de concentração e
-                lançamento de energia, criada pelo Mestre Kame.
-            </p>
 
-            <div class="tecnica-detalhe">
+        <?php if ($resultado->num_rows > 0): ?>
 
-                <strong>
-                    USUÁRIOS
-                </strong>
 
-                <span>
-                    Goku, Mestre Kame e Gohan
-                </span>
+            <?php while ($tecnica = $resultado->fetch_assoc()): ?>
+
+
+                <article class="card-tecnica">
+
+
+                    <!-- IMAGEM -->
+
+                    <div class="imagem-tecnica">
+
+                        <?php if (!empty($tecnica["imagem"])): ?>
+
+                            <img
+                                src="<?php echo htmlspecialchars($tecnica["imagem"]); ?>"
+                                alt="<?php echo htmlspecialchars($tecnica["nome"]); ?>"
+                            >
+
+                        <?php else: ?>
+
+                            <div class="sem-imagem">
+                                SEM IMAGEM
+                            </div>
+
+                        <?php endif; ?>
+
+                    </div>
+
+
+                    <!-- CONTEÚDO -->
+
+                    <div class="conteudo-tecnica">
+
+
+                        <div class="cabecalho-tecnica">
+
+                            <span class="numero-tecnica">
+
+                                <?php
+                                echo str_pad(
+                                    $tecnica["id"],
+                                    2,
+                                    "0",
+                                    STR_PAD_LEFT
+                                );
+                                ?>
+
+                            </span>
+
+                            <span class="tipo-tecnica">
+
+                                <?php
+                                echo htmlspecialchars(
+                                    strtoupper($tecnica["tipo"])
+                                );
+                                ?>
+
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            <?php
+                            echo htmlspecialchars($tecnica["nome"]);
+                            ?>
+
+                        </h2>
+
+
+                        <p>
+
+                            <?php
+                            echo htmlspecialchars($tecnica["descricao"]);
+                            ?>
+
+                        </p>
+
+
+                        <div class="dados-tecnica">
+
+                            <div>
+
+                                <strong>Usuários</strong>
+
+                                <span>
+                                    <?php
+                                    echo htmlspecialchars(
+                                        $tecnica["usuarios"]
+                                    );
+                                    ?>
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>Tipo</strong>
+
+                                <span>
+                                    <?php
+                                    echo htmlspecialchars(
+                                        $tecnica["tipo"]
+                                    );
+                                    ?>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="botao-ver-tecnica"
+                        >
+                            VER TÉCNICA
+                        </a>
+
+
+                    </div>
+
+
+                </article>
+
+
+            <?php endwhile; ?>
+
+
+        <?php else: ?>
+
+
+            <div class="nenhuma-tecnica">
+
+                <h2>Nenhuma técnica encontrada.</h2>
+
+                <p>
+                    As técnicas aparecerão aqui quando forem cadastradas
+                    no banco de dados.
+                </p>
 
             </div>
 
-        </article>
 
-
-        <article class="card-tecnica">
-
-            <h2>
-                FINAL FLASH
-            </h2>
-
-            <p>
-                Uma das técnicas mais poderosas de Vegeta,
-                concentrando uma enorme quantidade de energia.
-            </p>
-
-            <div class="tecnica-detalhe">
-
-                <strong>
-                    USUÁRIO PRINCIPAL
-                </strong>
-
-                <span>
-                    Vegeta
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <article class="card-tecnica">
-
-            <h2>
-                GALICK GUN
-            </h2>
-
-            <p>
-                Técnica de energia utilizada por Vegeta,
-                disparada pelas mãos em direção ao adversário.
-            </p>
-
-            <div class="tecnica-detalhe">
-
-                <strong>
-                    USUÁRIO PRINCIPAL
-                </strong>
-
-                <span>
-                    Vegeta
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <article class="card-tecnica">
-
-            <h2>
-                GENKI-DAMA
-            </h2>
-
-            <p>
-                Técnica que reúne energia vital de seres vivos
-                para formar uma enorme esfera de energia.
-            </p>
-
-            <div class="tecnica-detalhe">
-
-                <strong>
-                    USUÁRIO PRINCIPAL
-                </strong>
-
-                <span>
-                    Goku
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <article class="card-tecnica">
-
-            <h2>
-                MASENKO
-            </h2>
-
-            <p>
-                Técnica de energia utilizada principalmente
-                por guerreiros Namekuseijins e seus alunos.
-            </p>
-
-            <div class="tecnica-detalhe">
-
-                <strong>
-                    USUÁRIO PRINCIPAL
-                </strong>
-
-                <span>
-                    Gohan
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <article class="card-tecnica">
-
-            <h2>
-                KAIoken
-            </h2>
-
-            <p>
-                Técnica ensinada pelo Senhor Kaio que aumenta
-                temporariamente o poder do usuário.
-            </p>
-
-            <div class="tecnica-detalhe">
-
-                <strong>
-                    USUÁRIO PRINCIPAL
-                </strong>
-
-                <span>
-                    Goku
-                </span>
-
-            </div>
-
-        </article>
+        <?php endif; ?>
 
 
     </section>
+
 
 </main>
 
@@ -257,3 +268,10 @@ if (!isset($_SESSION["usuario_id"])) {
 </body>
 
 </html>
+
+
+<?php
+
+$conexao->close();
+
+?>
